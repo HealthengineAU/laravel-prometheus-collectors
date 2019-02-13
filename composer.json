@@ -35,5 +35,12 @@
         ],
         "phpcs": "@php vendor/bin/phpcs",
         "phpunit": "@php vendor/bin/phpunit --colors=always"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HealthEngine\\Prometheus\\PrometheusServiceProvider"
+            ]
+        }
     }
 }
