@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "superbalist/laravel-prometheus-exporter": "^1.0",
+        "superbalist/laravel-prometheus-exporter": "^1.0.3",
         "illuminate/queue": "^5.5"
     },
     "require-dev": {
