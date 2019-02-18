@@ -16,7 +16,14 @@ It only registers collectors which integrate into
 
 ## Usage
 
-TODO
+This extends the [Superbalist/laravel-prometheus-exporter](https://github.com/Superbalist/laravel-prometheus-exporter)
+so you will need to read that documentation as well.
+
+To customise what metrics are exported, publish the configuration file and edit it:
+
+```bash
+php artisan vendor:publish --provider="HealthEngine\Prometheus\PrometheusServiceProvider"
+```
 
 ## License
 
