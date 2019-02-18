@@ -15,7 +15,9 @@ class PrometheusServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([__DIR__ . '/../config/prometheus-collectors.php' => config_path('prometheus-collectors.php')]);
+        $this->publishes([
+            __DIR__ . '/../config/prometheus-collectors.php' => config_path('prometheus-collectors.php'),
+        ]);
     }
 
     /**

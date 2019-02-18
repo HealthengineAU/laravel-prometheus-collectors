@@ -34,5 +34,5 @@
 
     <!-- paths to check -->
     <file>src</file>
-    <file>tests</file>
+    <!-- <file>tests</file> -->
 </ruleset>
