@@ -15,4 +15,6 @@ return [
         'default',
     ],
 
+    'include_failed_queue' => true,
+
 ];

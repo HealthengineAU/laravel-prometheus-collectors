@@ -2,6 +2,7 @@
 
 namespace HealthEngine\Prometheus\Collector;
 
+use Illuminate\Database\Connection;
 use Illuminate\Queue\Failed\FailedJobProviderInterface;
 use Illuminate\Queue\QueueManager;
 use Superbalist\LaravelPrometheusExporter\CollectorInterface;
@@ -12,15 +13,19 @@ class QueueCollector implements CollectorInterface
     /** @var QueueManager */
     protected $queueManager;
 
+    /** @var Connection */
+    protected $database;
+
     /** @var \Prometheus\Gauge */
     protected $lengthGauge;
 
     /** @var array The list of queues to monitor */
     protected $queues;
 
-    public function __construct(QueueManager $queueManager, array $queues)
+    public function __construct(QueueManager $queueManager, Connection $database, array $queues)
     {
         $this->queueManager = $queueManager;
+        $this->database = $database;
         $this->queues = $queues;
     }
 
@@ -60,7 +65,12 @@ class QueueCollector implements CollectorInterface
     {
         // export the queue lengths
         foreach ($this->queues as $queue) {
-            $this->lengthGauge->set($this->queueManager->size(), [$queue]);
+            $this->lengthGauge->set($this->queueManager->size($queue), [$queue]);
+        }
+        // including the failed jobs if enabled
+        if (config('prometheus-collectors.include_failed_queue')) {
+            $count = $this->database->table('failed_jobs')->count();
+            $this->lengthGauge->set($count, ['failed']);
         }
     }
 }
