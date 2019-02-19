@@ -3,7 +3,6 @@
 namespace HealthEngine\Prometheus\Collector;
 
 use Illuminate\Database\Connection;
-use Illuminate\Queue\Failed\FailedJobProviderInterface;
 use Illuminate\Queue\QueueManager;
 use Superbalist\LaravelPrometheusExporter\CollectorInterface;
 use Superbalist\LaravelPrometheusExporter\PrometheusExporter;
