@@ -35,7 +35,7 @@ class QueueCollector implements CollectorInterface
      */
     public function getName()
     {
-        'queue';
+        return 'queue';
     }
 
     /**
