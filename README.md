@@ -4,6 +4,7 @@
 [![Total Downloads](https://poser.pugx.org/healthengine/laravel-prometheus-collectors/downloads)](https://packagist.org/packages/healthengine/laravel-prometheus-collectors)
 [![Build Status](https://travis-ci.com/HealthEngineAU/laravel-prometheus-collectors.svg?branch=master)](https://travis-ci.com/HealthEngineAU/laravel-prometheus-collectors)
 [![Coverage Status](https://coveralls.io/repos/github/HealthEngineAU/laravel-prometheus-collectors/badge.svg?branch=master)](https://coveralls.io/github/HealthEngineAU/laravel-prometheus-collectors?branch=master)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=HealthEngineAU/laravel-prometheus-collectors)](https://dependabot.com)
 
 This package provides a set of default Prometheus data collectors for use with Laravel.
 
