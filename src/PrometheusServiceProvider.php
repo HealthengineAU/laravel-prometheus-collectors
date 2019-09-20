@@ -1,5 +1,4 @@
 <?php
-
 namespace HealthEngine\Prometheus;
 
 use HealthEngine\Prometheus\Collector\QueueCollector;
@@ -29,9 +28,11 @@ class PrometheusServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/prometheus-collectors.php', 'prometheus-collectors');
 
-        $this->app->when(QueueCollector::class)->needs('$queues')->give(config('prometheus-collectors.queues'));
+        $this->app->when(QueueCollector::class)
+            ->needs('$queues')
+            ->give(config('prometheus-collectors.queues'));
 
-        $this->app->extend(PrometheusExporter::class, function ($exporter) {
+        $this->app->extend(PrometheusExporter::class, function (PrometheusExporter $exporter) {
             $exporter->registerCollector($this->app->make(QueueCollector::class));
             return $exporter;
         });

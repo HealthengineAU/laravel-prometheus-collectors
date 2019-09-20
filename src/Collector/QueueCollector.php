@@ -63,8 +63,8 @@ class QueueCollector implements CollectorInterface
     public function collect()
     {
         // export the queue lengths
-        foreach ($this->queues as $queue) {
-            $this->lengthGauge->set($this->queueManager->size($queue), [$queue]);
+        foreach ($this->queues as $label => $queue) {
+            $this->lengthGauge->set($this->queueManager->size($queue), [$label]);
         }
         // including the failed jobs if enabled
         if (config('prometheus-collectors.include_failed_queue')) {
