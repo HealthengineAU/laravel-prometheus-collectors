@@ -27,8 +27,13 @@ class PrometheusServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/prometheus-collectors.php', 'prometheus-collectors');
-        $this->app->when(QueueCollector::class)->needs('$queues')->give(config('prometheus-collectors.queues'));
-        $this->app->when(QueueCollector::class)->needs('$queueLabels')->give(config('prometheus-collectors.queueLabels'));
+
+        $this->app->when(QueueCollector::class)
+            ->needs('$queues')
+            ->give(config('prometheus-collectors.queues'));
+        $this->app->when(QueueCollector::class)
+            ->needs('$queueLabels')
+            ->give(config('prometheus-collectors.queueLabels'));
 
         $this->app->extend(PrometheusExporter::class, function (PrometheusExporter $exporter) {
             $exporter->registerCollector($this->app->make(QueueCollector::class));
