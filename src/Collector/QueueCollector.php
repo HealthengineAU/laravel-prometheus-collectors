@@ -21,11 +21,11 @@ class QueueCollector implements CollectorInterface
     /** @var array The list of queues to monitor */
     protected $queues;
 
-    public function __construct(QueueManager $queueManager, Connection $database, array $queues, array $queueLabels)
+    public function __construct(QueueManager $queueManager, Connection $database, array $queues)
     {
         $this->queueManager = $queueManager;
         $this->database = $database;
-        $this->queues = array_combine($queueLabels, $queues);
+        $this->queues = $queues;
     }
 
     /**

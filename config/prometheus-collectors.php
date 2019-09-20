@@ -12,11 +12,7 @@ return [
     */
 
     'queues' => [
-        'default',
-    ],
-
-    'queueLabels' => [
-        'default',
+        'default' => 'default',
     ],
 
     'include_failed_queue' => true,
