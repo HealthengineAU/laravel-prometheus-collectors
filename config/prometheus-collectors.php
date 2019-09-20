@@ -15,6 +15,10 @@ return [
         'default',
     ],
 
+    'queueLabels' => [
+        'default',
+    ],
+
     'include_failed_queue' => true,
 
 ];
