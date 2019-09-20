@@ -11,6 +11,11 @@ return [
     |
     */
 
+    /* Associative array describes the queues in the following way
+     * queue label => queue name
+     * The label will be used to describe the queue in prometheus
+     * and the name will be passed to the QueueManager to determine the sizes
+    */
     'queues' => [
         'default' => 'default',
     ],
