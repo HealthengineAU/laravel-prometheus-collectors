@@ -36,4 +36,3 @@ class PrometheusServiceProvider extends ServiceProvider
         });
     }
 }
-
