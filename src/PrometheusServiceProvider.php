@@ -1,9 +1,10 @@
 <?php
-namespace HealthEngine\Prometheus;
 
-use HealthEngine\Prometheus\Collector\QueueCollector;
+namespace Healthengine\Prometheus;
+
+use Healthengine\LaravelPrometheusExporter\PrometheusExporter;
+use Healthengine\Prometheus\Collector\QueueCollector;
 use Illuminate\Support\ServiceProvider;
-use Superbalist\LaravelPrometheusExporter\PrometheusExporter;
 
 class PrometheusServiceProvider extends ServiceProvider
 {

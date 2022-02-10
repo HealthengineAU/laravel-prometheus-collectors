@@ -1,11 +1,11 @@
 <?php
 
-namespace HealthEngine\Prometheus\Collector;
+namespace Healthengine\Prometheus\Collector;
 
+use Healthengine\LaravelPrometheusExporter\CollectorInterface;
+use Healthengine\LaravelPrometheusExporter\PrometheusExporter;
 use Illuminate\Database\Connection;
 use Illuminate\Queue\QueueManager;
-use Superbalist\LaravelPrometheusExporter\CollectorInterface;
-use Superbalist\LaravelPrometheusExporter\PrometheusExporter;
 
 class QueueCollector implements CollectorInterface
 {
