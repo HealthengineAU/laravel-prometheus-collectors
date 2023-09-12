@@ -16,6 +16,7 @@ use Prometheus\Storage\InMemory;
 
 /**
  * @covers \Healthengine\Prometheus\Collector\QueueCollector
+ * @uses \Healthengine\Prometheus\PrometheusServiceProvider
  */
 class QueueCollectorTest extends TestCase
 {
