@@ -1,15 +1,5 @@
-# composer
-/vendor/
-composer.lock
-
-# tests
-phpunit.xml
-clover.xml
-coverage*
-
-# system
-.DS_Store
-
-# editors
 .idea
-*.swp
+.php-cs-fixer.cache
+.phpunit.cache
+composer.lock
+vendor
