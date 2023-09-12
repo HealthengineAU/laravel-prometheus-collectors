@@ -12,6 +12,7 @@ use Orchestra\Testbench\TestCase;
 
 /**
  * @covers \Healthengine\Prometheus\PrometheusServiceProvider
+ * @uses \Healthengine\Prometheus\Collector\QueueCollector
  */
 class PrometheusServiceProviderTest extends TestCase
 {
