@@ -1,4 +1,5 @@
 {
+    "abandoned": "spatie/laravel-prometheus",
     "name": "healthengine/laravel-prometheus-collectors",
     "description": "A set of sane default Prometheus data collectors",
     "keywords": ["laravel", "prometheus", "collector", "logs", "monitoring"],

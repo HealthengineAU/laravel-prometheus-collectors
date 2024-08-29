@@ -1,3 +1,8 @@
+> [!WARNING]
+> This package is abandoned, you should avoid using it.
+>
+> Use [spatie/laravel-prometheus](https://github.com/spatie/laravel-prometheus) instead.
+
 # Laravel Prometheus Collectors
 
 This package provides a set of default Prometheus data collectors for use with Laravel.
